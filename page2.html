@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>موسوعة البرمجة للمبتدئين</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <style>
+    .section {
+      margin-top: 40px;
+    }
+
+    .section h2 {
+      color: aquamarine;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .code-box {
+      background-color: #0d1b2a;
+      color: #00e0ff;
+      font-family: monospace;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .code-label {
+      color: #aaa;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <header>
+    <h1>موسوعة البرمجة للمبتدئين</h1>
+    <nav class="navg">
+      <ul>
+        <li><a href="page3.html#اختبر قدرتك">اختبر قدرتك</a></li>
+        <li><a href="page2.html">معلومات عامة</a></li>
+        <li><a href="page4.html">الأسئلة والملاحظات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- المحتوى الرئيسي -->
+  <div class="content">
+
+    <!-- مقدمة موسعة -->
+    <div class="section">
+      <h2>ما هي البرمجة؟</h2>
+      <p>
+        البرمجة هي عملية إنشاء أوامر وتعليمات يرسلها الإنسان إلى الحاسوب باستخدام لغات خاصة، مثل HTML و CSS و JavaScript.
+        من خلال البرمجة، يمكننا تطوير مواقع الويب، تطبيقات الهاتف، الألعاب، الأنظمة الذكية، وحتى الذكاء الاصطناعي.
+        تعتبر البرمجة من أهم المهارات في العالم الحديث، وتمنحك القدرة على تحويل الأفكار إلى واقع رقمي.
+      </p>
+      <p>
+        البرمجة لا تقتصر على المحترفين فقط، بل أصبحت اليوم متاحة للجميع، وتعلمها يساعد في تطوير مهارات التفكير المنطقي، وحل المشكلات، والعمل الجماعي.
+      </p>
+    </div>
+
+    <!-- قسم HTML مفصل -->
+    <div class="section">
+      <h2>تعريف HTML</h2>
+      <p>
+        HTML (HyperText Markup Language) هي اللغة الأساسية لإنشاء هيكل صفحات الويب. 
+        تُستخدم لتحديد العناصر مثل العناوين، الفقرات، الصور، الروابط، الجداول، القوائم، النماذج، والمزيد.
+      </p>
+      <p>أشهر العناصر في HTML:</p>
+      <ul>
+        <li><code>&lt;h1&gt;...&lt;/h1&gt;</code>: لكتابة عنوان.</li>
+        <li><code>&lt;p&gt;...&lt;/p&gt;</code>: لكتابة فقرة.</li>
+        <li><code>&lt;a href=""&gt;...&lt;/a&gt;</code>: لإضافة رابط.</li>
+        <li><code>&lt;img src="" /&gt;</code>: لإضافة صورة.</li>
+      </ul>
+      <div class="code-label">مثال على صفحة HTML بسيطة:</div>
+      <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;موقعي الأول&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;مرحباً بك في موقعي!&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;هذا أول مشروع HTML لي.&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+      </div>
+    </div>
+
+    <!-- قسم CSS مفصل -->
+    <div class="section">
+      <h2>تعريف CSS</h2>
+      <p>
+        CSS (Cascading Style Sheets) هي لغة تنسيق تستخدم لتجميل صفحات الويب التي تُكتب بلغة HTML. 
+        من خلالها نحدد الألوان، المساحات، الخطوط، المواقع، الخلفيات، التحريك، وأكثر.
+      </p>
+      <p>أشهر الخصائص في CSS:</p>
+      <ul>
+        <li><code>color</code>: لتحديد لون النص.</li>
+        <li><code>background-color</code>: لتحديد لون الخلفية.</li>
+        <li><code>font-family</code>: لتغيير نوع الخط.</li>
+        <li><code>padding / margin</code>: لتحديد المسافات.</li>
+      </ul>
+      <div class="code-label">مثال على تنسيق CSS:</div>
+      <div class="code-box">
+body {<br>
+&nbsp;&nbsp;background-color: #001f3f;<br>
+&nbsp;&nbsp;color: white;<br>
+&nbsp;&nbsp;font-family: 'Arial', sans-serif;<br>
+&nbsp;&nbsp;text-align: center;<br>
+}<br><br>
+h1 {<br>
+&nbsp;&nbsp;color: aquamarine;<br>
+}
+      </div>
+    </div>
+
+    <!-- قسم الفيديو -->
+    <div class="section">
+      <h2>🎬 كيف تنشئ أول موقع لك؟</h2>
+      <p>
+        شاهد هذا الفيديو لتتعلم خطوة بخطوة كيف تبدأ بإنشاء أول موقع بسيط باستخدام HTML و CSS.
+      </p>
+      <!-- يمكنك استبدال الرابط لاحقًا بفيديو YouTube -->
+      <iframe src="https://www.youtube.com/embed/dD2EISBDjWM" title="كيف تنشئ أول موقع" allowfullscreen></iframe>
+    </div>
+
+    <!-- زر الرجوع -->
+    <a class="back-link" href="index.html">← الرجوع إلى الصفحة الرئيسية</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معي</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      text-align: right;
+    }
+
+    .contact-container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .my-info {
+      background-color: #e3f2fd;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .my-info p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    button {
+      background-color: #00796b;
+      color: white;
+      padding: 12px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <h1>📬 تواصل معي</h1>
+
+    <div class="my-info">
+      <h2>معلومات عني 👤</h2>
+      <p>👨‍🎓 الاسم: رائد عادل معشي</p>
+      <p>📧 البريد الإلكتروني: raed.turbo2020@gmail.com</p>
+      <p>📞 رقم الجوال: 0509839016</p>
+    </div>
+
+    <form onsubmit="return handleSubmit(event)">
+      <label for="name">اسمك</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">بريدك الإلكتروني</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">الرسالة</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">إرسال الرسالة</button>
+    </form>
+
+    <div id="thankYouMessage" style="display:none; color: green; text-align: center; margin-top: 15px;">
+      ✅ تم إرسال رسالتك بنجاح!
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      document.getElementById("thankYouMessage").style.display = "block";
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>

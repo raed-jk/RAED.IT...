@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>صفحة الأسئلة والملاحظات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      text-align: center;
+      color: #00796b;
+      margin-bottom: 25px;
+      font-size: 26px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00796b;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    .thank-you {
+      text-align: center;
+      margin-top: 20px;
+      color: #2e7d32;
+      font-size: 18px;
+      display: none;
+    }
+
+    .back-button {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #eeeeee;
+      color: #00796b;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #d1f2eb;
+    }
+
+    .question-log {
+      margin-top: 40px;
+      background-color: #f1f8e9;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .question-log h2 {
+      font-size: 20px;
+      color: #33691e;
+      margin-bottom: 15px;
+    }
+
+    .question-log ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .question-log li {
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📋 صفحة الأسئلة والملاحظات</h1>
+
+    <form onsubmit="return handleSubmit(event)">
+      <label for="name">👤 الاسم:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="class">🏫 الصف:</label>
+      <input type="text" id="class" name="class" required>
+
+      <label for="question">❓ السؤال أو الملاحظة:</label>
+      <textarea id="question" name="question" required></textarea>
+
+      <button type="submit">إرسال ✅</button>
+    </form>
+
+    <div class="thank-you" id="thankYouMessage">
+      ✅ شكراً! تم استلام ملاحظتك.
+    </div>
+
+    <div class="question-log" id="questionLog">
+      <h2>📚 الأسئلة السابقة:</h2>
+      <ul id="logList">
+        <!-- الأسئلة تظهر هنا -->
+      </ul>
+    </div>
+
+    <div class="back-button">
+      <a href="index.html">🔙 الرجوع للصفحة الرئيسية</a>
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const className = document.getElementById("class").value;
+      const question = document.getElementById("question").value;
+
+      // عرض رسالة الشكر
+      document.getElementById("thankYouMessage").style.display = "block";
+
+      // إنشاء عنصر جديد في القائمة
+      const listItem = document.createElement("li");
+      listItem.textContent = `👤 ${name} - الصف ${className}: ${question}`;
+      document.getElementById("logList").appendChild(listItem);
+
+      // إعادة تعيين النموذج
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>

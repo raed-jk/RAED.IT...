@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+body { font-family: 'Arial', sans-serif; background-color: #f5f5f5; margin: 0; padding: 0; line-height: 1.6; color: #333; } header { background-color: #004080; color: white; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; } header img { border-radius: 50%; } .navg ul { list-style: none; display: flex; gap: 15px; margin: 0; padding: 0; } .navg a { color: white; text-decoration: none; font-weight: bold; } .hero { background-color: #e0f0ff; text-align: center; padding: 50px 20px; } .hero .name { font-size: 36px; color: #004080; } .hero .title { font-size: 24px; color: #0077cc; } .hireme { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #004080; color: white; text-decoration: none; border-radius: 5px; } .about, .info, .login { background-color: white; margin: 20px; padding: 20px; border-radius: 10px; } 
+.about h1,
+ .info h2, 
+ .login h2 { color: #004080; } 
+ .login form { display: flex; flex-direction: column; gap: 10px; } 
+ .login input { padding: 10px; border: 1px solid #ccc; border-radius: 5px; } 
+ .login button { padding: 10px; background-color: #0077cc; color: white; border: none; border-radius: 5px; cursor: pointer; }
+.login button:hover { 
+    background-color: #005fa3; } 
+
+    .signup { background-color: white; margin: 20px; padding: 20px; border-radius: 10px; } 
+    .signup h2 { color: #004080; } 
+    .signup form { display: flex; flex-direction: column; gap: 10px; } 
+    .signup input { padding: 10px; border: 1px solid #ccc; border-radius: 5px; } 
+    .signup button { padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; } 
+    .signup button:hover { background-color: #218838; }
